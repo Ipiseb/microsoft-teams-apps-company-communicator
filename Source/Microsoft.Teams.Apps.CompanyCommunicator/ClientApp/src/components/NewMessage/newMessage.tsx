@@ -724,7 +724,7 @@ class NewMessage extends React.Component<INewMessageProps, formState> {
         let url = event.target.value.toLowerCase();
         if (!((url === "") || (url.startsWith("https://") || (url.startsWith("data:image/png;base64,")) || (url.startsWith("data:image/jpeg;base64,")) || (url.startsWith("data:image/gif;base64,"))))) {
             this.setState({
-                errorImageUrlMessage: "URL must start with https://"
+                errorImageUrlMessage: "keine URL"
             });
         } else {
             this.setState({
@@ -818,7 +818,7 @@ class NewMessage extends React.Component<INewMessageProps, formState> {
     private onBtnLinkChanged = (event: any) => {
         if (!(event.target.value === "" || event.target.value.toLowerCase().startsWith("https://"))) {
             this.setState({
-                errorButtonUrlMessage: "URL must start with https://"
+                errorButtonUrlMessage: "Das ist keine URL"
             });
         } else {
             this.setState({
